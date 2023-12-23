@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Usciamo Insieme?</title>
+    <link rel="icon" type="image/x-icon" href="icoCuore.ico">
+
+    <!-- 
+        Creato con tanto amore da @matte_100hp (ig)
+        Spero dica si!
+        ♥
+        Vi tengo aggiornati!!!
+    -->
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('sfondo.gif'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        #gifContainer {
+            text-align: center;
+            position: relative;
+        }
+
+        #gif {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .button2 {
+            background-color: rgb(226, 183, 226);
+            border: 2px solid rgb(180, 146, 180);
+            color: rgb(121, 111, 99);
+            border-radius: 5px;
+           position: absolute;
+        }
+        .button {
+            background-color: rgb(226, 183, 226);
+            border: 2px solid rgb(180, 146, 180);
+            color: rgb(121, 111, 99);
+            border-radius: 5px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="gifContainer">
+        <h1>Vuoi uscire con me??</h1>
+        <img id="gif" src="due.gif" loop>
+        <br>
+        <button class="button" id="button1">Si</button>
+        <button class="button2" id="button2">No</button>
+    </div>
+
+    <script>
+        document.getElementById("button1").addEventListener("click", function() {
+           window.location.href = "grazie.html";
+        });
+
+        document.getElementById("button2").addEventListener("mouseover", function () {
+            var container = document.getElementById("gifContainer");
+
+            var newTop = Math.random() * (container.clientHeight - 30);
+            var newLeft = Math.random() * (container.clientWidth - 60);
+
+            document.getElementById("button2").style.top = newTop + 'px';
+            document.getElementById("button2").style.left = newLeft + 'px';
+        });
+    </script>
+</body>
+</html>
